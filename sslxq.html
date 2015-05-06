@@ -7,7 +7,7 @@
 	</style>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=jkbYMs6byLBRXsot1XoGVxf5"></script>
 	<script src="audio.min.js"></script>
-	<title>athaut</title>
+	<title>åµ©å±±è·¯æ ¡åŒºæ™ºèƒ½</title>
 </head>
 <body>
 
@@ -34,7 +34,7 @@
 
 
 
-//Èı¸öµØÍ¼¿ØÖÆ°´Å¥
+//ä¸‰ä¸ªåœ°å›¾æ§åˆ¶æŒ‰é’®
 function sxs()
 {
 	if(map.getZoom()>10&&map.getZoom()<20)
@@ -56,31 +56,31 @@ function gws()
 }
 
 
-//²¥·ÅÔİÍ£·½·¨
+//æ’­æ”¾æš‚åœæ–¹æ³•
 function bf(){
-	if(document.getElementById("bfzt").innerHTML=="²¥·Å"&&document.getElementById("mus").paused==true&&document.getElementById("mus").readyState!=0){
+	if(document.getElementById("bfzt").innerHTML=="æ’­æ”¾"&&document.getElementById("mus").paused==true&&document.getElementById("mus").readyState!=0){
 		document.getElementById("mus").play(); 
-		document.getElementById("bfzt").innerHTML="ÔİÍ£";
+		document.getElementById("bfzt").innerHTML="æš‚åœ";
 	}
 	else {
 		document.getElementById("mus").pause(); 
-		document.getElementById("bfzt").innerHTML="²¥·Å";
+		document.getElementById("bfzt").innerHTML="æ’­æ”¾";
 	}
 }
 	
-//ÒôÆµÏß³Ì
+//éŸ³é¢‘çº¿ç¨‹
 function adp(){
 	if(document.getElementById("mus").ended==true)
-		document.getElementById("bfzt").innerHTML="²¥·Å";
+		document.getElementById("bfzt").innerHTML="æ’­æ”¾";
 	if(document.getElementById("mus").readyState!=0)
-		document.getElementById("hc").innerHTML="ÒôÆµ¾ÍĞ÷";
+		document.getElementById("hc").innerHTML="éŸ³é¢‘å°±ç»ª";
 	else 
-		document.getElementById("hc").innerHTML="ÒôÆµ×¼±¸ÖĞ...";
+		document.getElementById("hc").innerHTML="éŸ³é¢‘å‡†å¤‡ä¸­...";
 	
 
 }
-//¹¦ÄÜ
-//»­¾ØĞÎ	
+//åŠŸèƒ½
+//ç”»çŸ©å½¢	
 function drawrec(pStart,pEnd){	
 	var rectangle = new BMap.Polygon([
 		new BMap.Point(pStart.lng,pStart.lat),
@@ -88,31 +88,31 @@ function drawrec(pStart,pEnd){
 		new BMap.Point(pEnd.lng,pEnd.lat),
 		new BMap.Point(pStart.lng,pEnd.lat)
 	], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5,fillColor:"",enableMassClear:false});
-	map.addOverlay(rectangle);         //Ôö¼Ó¾ØĞÎ
+	map.addOverlay(rectangle);         //å¢åŠ çŸ©å½¢
 }
 
-//ÔÚÇøÓò·ñ
+//åœ¨åŒºåŸŸå¦
 function panbie(pStart,pEnd,pset)
 {
-	var c = new BMap.Bounds(pStart,pEnd); //²âÊÔBounds¶ÔÏó
+	var c = new BMap.Bounds(pStart,pEnd); //æµ‹è¯•Boundså¯¹è±¡
   var result = BMapLib.GeoUtils.isPointInRect(pset, c);
 	return result;
 }
 
 
-//¸÷ÖÖ×Ô¶¨Òå¿Ø¼şÌí¼Ó	
+//å„ç§è‡ªå®šä¹‰æ§ä»¶æ·»åŠ 	
 function zdykj(){
-var blc = new BMap.ScaleControl({anchor: BMAP_ANCHOR_BOTTOM_LEFT});// ×øÏÂ£¬Ìí¼Ó±ÈÀı³ß
-map.addControl(blc); //±ÈÀı³ß 
+var blc = new BMap.ScaleControl({anchor: BMAP_ANCHOR_BOTTOM_LEFT});// åä¸‹ï¼Œæ·»åŠ æ¯”ä¾‹å°º
+map.addControl(blc); //æ¯”ä¾‹å°º 
 
 
 var sxx = new BMap.CopyrightControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT,offset:new BMap.Size(10,85)});  
-sxx.addCopyright({id: 1, content: "<button id = 'sxsx' onclick='sxs()' style='width:50px;height:50px;'>ËõĞ¡</button>"}); 
-map.addControl(sxx); //ËõĞ¡  
+sxx.addCopyright({id: 1, content: "<button id = 'sxsx' onclick='sxs()' style='width:50px;height:50px;'>ç¼©å°</button>"}); 
+map.addControl(sxx); //ç¼©å°  
 
 var fdd = new BMap.CopyrightControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT,offset:new BMap.Size(10,25)});  
-fdd.addCopyright({id: 2, content: "<button id = 'fdfd' onclick='fds()' style='width:50px;height:50px;'>·Å´ó</button>"}); 
-map.addControl(fdd); //·Å´ó 
+fdd.addCopyright({id: 2, content: "<button id = 'fdfd' onclick='fds()' style='width:50px;height:50px;'>æ”¾å¤§</button>"}); 
+map.addControl(fdd); //æ”¾å¤§ 
 
  
 var gw = new BMap.CopyrightControl({anchor: BMAP_ANCHOR_BOTTOM_LEFT,offset:new BMap.Size(10,30)});  
@@ -120,50 +120,54 @@ gw.addCopyright({id: 3, content: "<button id = 'wzz' onclick='gws()' style='widt
 
 
 
-map.addControl(gw); //ÎÒµÄÎ»ÖÃ  
+map.addControl(gw); //æˆ‘çš„ä½ç½®  
 
 //var ad = new BMap.CopyrightControl({anchor: BMAP_ANCHOR_TOP_LEFT});  
 //ad.addCopyright({id: 4, content: "		<audio id='mus'  style ='width:auto;height:40px'><source src='welcometohaut.mp3' type='audio/mpeg'></audio>"}); 
-//map.addControl(ad); //²¥·ÅÆ÷  
+//map.addControl(ad); //æ’­æ”¾å™¨  
 
 
 
 var bff = new BMap.CopyrightControl({anchor:  BMAP_ANCHOR_BOTTOM_RIGHT,offset:new BMap.Size(10,145)});  
-bff.addCopyright({id: 5, content: "<button id = 'bfzt' onclick='bf()' style='width:50px;height:50px;'>²¥·Å</button>"}); 
-map.addControl(bff); //²¥·Å
+bff.addCopyright({id: 5, content: "<button id = 'bfzt' onclick='bf()' style='width:50px;height:50px;'>æ’­æ”¾</button>"}); 
+map.addControl(bff); //æ’­æ”¾
 
 
 
 var bff = new BMap.CopyrightControl({anchor:  BMAP_ANCHOR_TOP_LEFT});  
-bff.addCopyright({id: 6, content: "<button id = 'hc' disabled = 'true'   style='width:auto;height:30px;background:yellow'>ÒôÆµ×¼±¸ÖĞ...</button>"}); 
-map.addControl(bff); //×¼±¸ÏÔÊ¾ 	
+bff.addCopyright({id: 6, content: "<button id = 'hc' disabled = 'true'   style='width:auto;height:30px;background:yellow'>éŸ³é¢‘å‡†å¤‡ä¸­...</button>"}); 
+map.addControl(bff); //å‡†å¤‡æ˜¾ç¤º 	
 
 
-//Ìí¼ÓÏÂÀ­²Ëµ¥¿Ø¼ş ÏÔÊ¾·½·¨ÔÚÍâÃæ
+//æ·»åŠ ä¸‹æ‹‰èœå•æ§ä»¶ æ˜¾ç¤ºæ–¹æ³•åœ¨å¤–é¢
 //var sel = new BMap.CopyrightControl({anchor: BMAP_ANCHOR_TOP_RIGHT});  
-//map.addControl(sel); //Ñ¡Ôñ²Ëµ¥¿Ø¼ş  
+//map.addControl(sel); //é€‰æ‹©èœå•æ§ä»¶  
 
 
 }
 
-//×ø±ê
+
+
+//åæ ‡
 	var shauts = new BMap.Point(113.630389,34.744611);
 	var shaute = new BMap.Point(113.634539,34.748896);
 //??	
+
+
 	
 	var sxinans = new BMap.Point(113.630389,34.744611);
 	var sxinane = new BMap.Point(113.632864,34.745734);
 	
-//?§æ	
+//?Ñ„	
 	var szxs = new BMap.Point(113.632145,34.74576);
 	var szxe = new BMap.Point(113.633668,34.747113);
 	
 	
 	
 	
-//?¡À¡À	
-	var sxibeis = new BMap.Point(113.630389,34.747554);
-	var sxibeie = new BMap.Point(113.631408,34.748896);
+//?Â±Â±	
+//	var sxibeis = new BMap.Point(113.630389,34.747554);
+//	var sxibeie = new BMap.Point(113.631408,34.748896);
 	
 	
 //??1?
@@ -210,7 +214,7 @@ var sel = new BMap.CopyrightControl({anchor: BMAP_ANCHOR_TOP_RIGHT});
 xlcd();
  
 function xlcd(){
-	return sel.addCopyright({id: 7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='hgd#'>»¶Ó­¹âÁÙºÓ¹¤´ó</option><option value='hegongda#'>ºÓÄÏ¹¤Òµ´óÑ§¼ò½é</option></select>"}); 
+	return sel.addCopyright({id: 7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='hgd#'>æ¬¢è¿å…‰ä¸´æ²³å·¥å¤§</option><option value='hegongda#'>æ²³å—å·¥ä¸šå¤§å­¦ç®€ä»‹</option></select>"}); 
 	}
 
 
@@ -219,64 +223,83 @@ function xlcd(){
 function qiehuan(selObj)
 {
 //	alert(selObj.options[selObj.selectedIndex].value);
-if(selObj.options[selObj.selectedIndex].value=="ct#")
+if(selObj.options[selObj.selectedIndex].value=="ct#"){
  	document.getElementById("mus").src= "welcometocanting.mp3"; 
+ 	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
  	
-if(selObj.options[selObj.selectedIndex].value=="ct1#")
+if(selObj.options[selObj.selectedIndex].value=="ct1#"){
 	document.getElementById("mus").src= "1can.mp3"; 
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	
-if(selObj.options[selObj.selectedIndex].value=="ct2#")
+if(selObj.options[selObj.selectedIndex].value=="ct2#"){
 	document.getElementById("mus").src= "2can.mp3"; 
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	
-if(selObj.options[selObj.selectedIndex].value=="ct3#")
+if(selObj.options[selObj.selectedIndex].value=="ct3#"){
 	document.getElementById("mus").src= "3can.mp3"; 
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 			
-if(selObj.options[selObj.selectedIndex].value=="tyg#")
+			
+			
+if(selObj.options[selObj.selectedIndex].value=="tyg#"){
 	document.getElementById("mus").src= "welcometotiyuguan.mp3";
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	 
-if(selObj.options[selObj.selectedIndex].value=="tyg1#")
+if(selObj.options[selObj.selectedIndex].value=="tyg1#"){
 	document.getElementById("mus").src= "tiyuguan.mp3";
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	 
-if(selObj.options[selObj.selectedIndex].value=="tyg2#")
+if(selObj.options[selObj.selectedIndex].value=="tyg2#"){
+	
 	document.getElementById("mus").src= "tiyuchang.mp3"; 
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	
-if(selObj.options[selObj.selectedIndex].value=="tyg3#")
+if(selObj.options[selObj.selectedIndex].value=="tyg3#"){
 	document.getElementById("mus").src= "xiyubu.mp3";
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	 
-if(selObj.options[selObj.selectedIndex].value=="tyg4#")
+if(selObj.options[selObj.selectedIndex].value=="tyg4#"){
 	document.getElementById("mus").src= "kaishuifang.mp3"; 
-	
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	
 
 
 	
 	
-if(selObj.options[selObj.selectedIndex].value=="jxl#")
+if(selObj.options[selObj.selectedIndex].value=="jxl#"){
 	document.getElementById("mus").src= "welcometojiaoxuelou.mp3"; 
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	
-if(selObj.options[selObj.selectedIndex].value=="jxl1#")
-	document.getElementById("mus").src= "jiaoxuelou.mp3"; 	
+if(selObj.options[selObj.selectedIndex].value=="jxl1#"){
+	document.getElementById("mus").src= "jiaoxuelou.mp3"; 
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}	
 
 
-if(selObj.options[selObj.selectedIndex].value=="jxl2#")
-	document.getElementById("mus").src= "zhongxinshiyanshi.mp3"; 
+if(selObj.options[selObj.selectedIndex].value=="jxl2#"){
+	document.getElementById("mus").src= "zhongxinshiyanlou.mp3"; 
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	
-	if(selObj.options[selObj.selectedIndex].value=="jx3#")
+	if(selObj.options[selObj.selectedIndex].value=="jxl3#"){
 	document.getElementById("mus").src= "shiyanlou.mp3";
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	
 	
 	
 
 	
 	
-	if(selObj.options[selObj.selectedIndex].value=="xinan#")
- 	document.getElementById("mus").src= "xiananqu.mp3"; 
+	if(selObj.options[selObj.selectedIndex].value=="xinan#"){
+ 	document.getElementById("mus").src= "xinanqu.mp3"; 
+ 	document.getElementById("bfzt").innerHTML="æ’­æ”¾";
+}
  	
-if(selObj.options[selObj.selectedIndex].value=="xinan1#")
+if(selObj.options[selObj.selectedIndex].value=="xinan1#"){
 	document.getElementById("mus").src= "jixujiaoyuxueyuan.mp3"; 
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	
-if(selObj.options[selObj.selectedIndex].value=="xinan2#")
+if(selObj.options[selObj.selectedIndex].value=="xinan2#"){
 	document.getElementById("mus").src= "xiaoyiyuan.mp3"; 
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	
 	
 	
@@ -286,14 +309,17 @@ if(selObj.options[selObj.selectedIndex].value=="xinan2#")
 	
 	
 	
-if(selObj.options[selObj.selectedIndex].value=="lib#")
+if(selObj.options[selObj.selectedIndex].value=="lib#"){
 	document.getElementById("mus").src= "lib.mp3"; 
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 			
-if(selObj.options[selObj.selectedIndex].value=="lib1#")
+if(selObj.options[selObj.selectedIndex].value=="lib1#"){
 	document.getElementById("mus").src= "tushuguan.mp3";
-	 
-if(selObj.options[selObj.selectedIndex].value=="lib2#")
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";
+	}
+if(selObj.options[selObj.selectedIndex].value=="lib2#"){
 	document.getElementById("mus").src= "9haolou.mp3";
+	document.getElementById("bfzt").innerHTML="æ’­æ”¾";}
 	 
 
 	
@@ -321,14 +347,14 @@ geolocation.getCurrentPosition(function(r){
 		var mk = new BMap.Marker(r.point);
 		map.addOverlay(mk);
 		map.panTo(r.point);
-//	alert('ÄúµÄÎ»ÖÃ£º'+r.point.lng+','+r.point.lat) 
+//	alert('æ‚¨çš„ä½ç½®ï¼š'+r.point.lng+','+r.point.lat) 
 		sp = r.point;
     var  pb = 1;    
     //at haut
     if(panbie(shauts,shaute,r.point)== true){
     	document.getElementById("mus").src= "welcometohaut.mp3"; 
-    	map.addControl(sel); //Ìí¼ÓÑ¡Ôñ²Ëµ¥¿Ø¼ş 
-//  	alert('ÄúµÄÎ»ÖÃ£º'+r.point.lng+','+r.point.lat);
+    	map.addControl(sel); //æ·»åŠ é€‰æ‹©èœå•æ§ä»¶ 
+//  	alert('æ‚¨çš„ä½ç½®ï¼š'+r.point.lng+','+r.point.lat);
 			var myVar=setInterval(function(){myTimer()},2000);
 			function myTimer(){
 				var ge = new BMap.Geolocation();
@@ -339,46 +365,46 @@ geolocation.getCurrentPosition(function(r){
 			    map.addOverlay(mk);
 			    		    
 
-			    if(panbie(scts,scte,r.point)== true&&document.getElementById("mus").ended==true){
- 			//	  alert("²ÍÌü");  				    	
+			    if(panbie(scts,scte,r.point)== true){
+ 			//	  alert("é¤å…");  				    	
 			    	if(pb != 4){
 		    			document.getElementById("mus").src= "welcometocanting.mp3"; 
-		    			sel.addCopyright({id:7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='ct#'>²ÍÌü</option><option value='ct1#'>Ò»²Í</option><option value='ct2#'>¶ş²Í</option><option value='ct3#'>Èı²Í</option></select>"}); 
+		    			sel.addCopyright({id:7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='ct#'>é¤å…</option><option value='ct1#'>ä¸€é¤</option><option value='ct2#'>äºŒé¤</option><option value='ct3#'>ä¸‰é¤</option></select>"}); 
 			    		pb =4;
 			  		}
 			    }
 			     else if(panbie(stygs,styge,r.point)== true){
-// 				   alert("ÌåÓı¹İ1?);     				       
+// 				   alert("ä½“è‚²é¦†1?);     				       
  				      if(pb != 5){
  				       		document.getElementById("mus").src= "welcometotiyuguan.mp3"; 
-		    					sel.addCopyright({id:7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='tyg#'>ÌåÓı¹İ</option><option value='tyg1#'>³¡µØ</option><option value='tyg2#'>?×ãÇò³¡</option><option value='tyg3#'>Ï´Ô¡ÖĞĞÄ</option><option value='tyg4#'>¿ªË®·¿</option></select>"});  				       		
+		    					sel.addCopyright({id:7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='tyg#'>ä½“è‚²é¦†</option><option value='tyg1#'>åœºåœ°</option><option value='tyg2#'>è¶³çƒåœº</option><option value='tyg3#'>æ´—æµ´ä¸­å¿ƒ</option><option value='tyg4#'>å¼€æ°´æˆ¿</option></select>"});  				       		
  				       		pb =5;
  				       		}
  				  }
 
 			     else if(panbie(szxs,szxe,r.point)== true){
-// 				   alert("½ÌÑ§Â¥");     				       
+// 				   alert("æ•™å­¦æ¥¼");     				       
  				      if(pb != 7){
  				       		document.getElementById("mus").src= "welcometojiaoxuequ.mp3"; 
-		    					sel.addCopyright({id:7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='jxl#'>½ÌÑ§Çø</option><option value='jxl1#'>½ÌÑ§Â¥</option><option value='jxl2#'>ÖĞĞÄÊµÑéÊÒ</option><option value='jxl3#'>?ÊµÑéÂ¥</option></select>"});  				       		
+		    					sel.addCopyright({id:7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='jxl#'>æ•™å­¦åŒº</option><option value='jxl1#'>æ•™å­¦æ¥¼</option><option value='jxl2#'>ä¸­å¿ƒå®éªŒå®¤</option><option value='jxl3#'>å®éªŒæ¥¼</option></select>"});  				       		
  				       		pb =7;
  				       		}
  				  }
 
 			     else if(panbie(sxinans,sxinane,r.point)== true){
-// 				   alert("Î÷ÄÏÇø");     				       
+// 				   alert("è¥¿å—åŒº");     				       
  				      if(pb != 6){
  				       		document.getElementById("mus").src= "xinanqu.mp3"; 
-		    					sel.addCopyright({id:7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='xinan#'>Î÷ÄÏÇø</option><option value='xinan1#'>¼ÌĞø½ÌÓıÑ§Ôº</option><option value='xinan2#'>Ò½Ôº</option></select>"});  				       		
+		    					sel.addCopyright({id:7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='xinan#'>è¥¿å—åŒº</option><option value='xinan1#'>ç»§ç»­æ•™è‚²å­¦é™¢</option><option value='xinan2#'>åŒ»é™¢</option></select>"});  				       		
  				       		pb =6;
  				       		}
  				  }
 	       
 			     else if(panbie(slibs,slibe,r.point)== true){
-// 				   alert("Í¼Êé¹İ"?);     				       
+// 				   alert("å›¾ä¹¦é¦†"?);     				       
  				      if(pb != 8){
  				       		document.getElementById("mus").src= "lib.mp3"; 
-		    					sel.addCopyright({id:7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='lib#'>Í¼Êé¹İ</option><option value='lib1#'>¼ò½é</option><option value='lib2#'>¸½½ü9ºÅÂ¥</option></select>"});  				       		
+		    					sel.addCopyright({id:7, content: "<select id = 'sele' name='music' onchange='qiehuan(this)' style = 'width:120px;height:40px'><option value='lib#'>å›¾ä¹¦é¦†</option><option value='lib1#'>ç®€ä»‹</option><option value='lib2#'>é™„è¿‘9å·æ¥¼</option></select>"});  				       		
  				       		pb =8;
  				       		}
  				  } 
@@ -396,7 +422,7 @@ geolocation.getCurrentPosition(function(r){
  	}
 
  	else {
- 		alert("ÄúÒÑ²»ÔÚºÓÄÏ¹¤Òµ´óÑ§");
+ 		alert("æ‚¨å·²ä¸åœ¨æ²³å—å·¥ä¸šå¤§å­¦");
  	}        
 },{enableHighAccuracy: true})
 					
